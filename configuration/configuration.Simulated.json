@@ -1,0 +1,244 @@
+{
+    "mode": "PLAYING",
+    "environment-mode": "SIMULATION",
+    "receive-data-from-remote": false,
+    "keys": {
+        "private-key": {
+            "path": "./communication/keys/UTBots.key.pem"
+        },
+        "public-key": {
+            "path": "./communication/keys/UTBots.pub.pem"
+        }
+    },
+    "remote-computer": {
+        "bluetooth": {
+            "address": "5C:CD:5B:40:9B:7D",
+            "channel": 4,
+            "game-controller": {
+                "channel": 1
+            }
+        },
+        "game-controller": {
+            "receiver": {
+                "buffer": {
+                    "size": 2048
+                }
+            }
+        }
+    },
+    "sslvision": {
+        "team": {
+            "robot-id-mapping": {
+                "0": 1,
+                "1": 2,
+                "2": 3
+            }
+        },
+        "foe-team":{
+            "desired-goalkeeper-mapped-id": 3
+        },
+        "ip": "224.5.23.2",
+        "port": 10006,
+        "receiver": {
+            "buffer": {
+                "size": 10000
+            }
+        }
+    },
+    "grsim": {
+        "control": {
+            "ip": "127.0.0.1",
+            "port": 20011
+        },
+        "vision": {
+            "ip": "224.5.23.2",
+            "port": 10020
+        }
+    },
+    "firasim": {
+        "control": {
+            "ip": "127.0.0.1",
+            "port": 20011
+        },
+        "vision": {
+            "ip": "224.0.0.1",
+            "port": 10002
+        }
+    },
+    "game-controller": {
+        "address": "127.0.0.1",
+        "port": 10008,
+        "register-as-team": false,
+        "foe-team": {
+            "goalkeeper": {
+                "desired-id": 3
+            }
+        }
+    },
+    "referee": {
+        "address": "224.5.23.1",
+        "port": 10003,
+        "receiver": {
+            "buffer": {
+                "size": 20000
+            }
+        }
+    },
+    "motion": {
+        "pid": {
+            "constants": {
+                "kp": 20,
+                "ki": 0,
+                "kd": 0.1
+            }
+        }
+    },
+    "rsoccer": {
+        "training": {
+            "time-step": 0.025,
+            "episode-duration": 20
+        }
+    },
+    "field": {
+        "length": 4.5,
+        "width": 3.0,
+        "goal": {
+            "width": 0.8,
+            "depth": 0.1
+        },
+        "goalkeeper-area": {
+            "length": 0.500,
+            "width": 1.350,
+            "radius": 0.860
+        },
+        "ball": {
+            "radius": 0.0215
+        }
+    },
+    "robot": {
+        "wheel": {
+            "radius": 0.0325
+        },
+        "speed": {
+            "max-radians-seconds": 30
+        },
+        "width": 0.075,
+        "length": 0.075
+    },
+    "team": {
+        "name": "UTBots",
+        "is-yellow-left-team": false,
+        "is-yellow-team": false,
+        "blue": {
+            "number-robots": 3
+        },
+        "yellow": {
+            "number-robots": 3
+        },
+        "roles": {
+            "attacker": {
+                "id": 0
+            },
+            "defensor": {
+                "id": 1
+            },
+            "goalkeeper": {
+                "id": 2
+            }
+        }
+    },
+    "stop": {
+        "distance-to-ball": 0.5
+    },
+    "normal-start":{
+        "after-penalty":{
+            "target-attacker-position":{
+                "x":1.6,
+                "y":0
+            }
+        }
+    },
+    "prepare-kickoff":{
+        "team": {
+            "position": {
+                "attacker": {
+                    "x": -0.25,
+                    "y": 0
+                },
+                "defensor": {
+                    "x": -1.5,
+                    "y": 0
+                },
+                "goalkeeper": {
+                    "x": -2.2,
+                    "y": 0
+                }
+            }
+        },
+        "foe-team": {
+            "position": {
+                "attacker": {
+                    "x": -0.7,
+                    "y": 0
+                },
+                "defensor": {
+                    "x": -1.5,
+                    "y": 0
+                },
+                "goalkeeper": {
+                    "x": -2.2,
+                    "y": 0
+                }
+            }
+        }
+    },
+    "prepare-penalty": {
+        "team": {
+            "position": {
+                "attacker": {
+                    "x": -1.5,
+                    "y": 0
+                },
+                "defensor": {
+                    "x": -2,
+                    "y": 1.2
+                },
+                "goalkeeper": {
+                    "x": -2.2,
+                    "y": 0
+                }
+            }
+        },
+        "foe-team": {
+            "position": {
+                "attacker": {
+                    "x": -0.70,
+                    "y": 0
+                },
+                "defensor": {
+                    "x": -1.7,
+                    "y": 0.2
+                },
+                "goalkeeper": {
+                    "x": -2.2,
+                    "y": 0
+                }
+            }
+        }
+    },
+    "strategy": {
+        "defensor": {
+            "defense-line": {
+                "x": -0.5
+            }
+        },
+        "attacker": {
+            "spin": {
+                "radius-to-spin": 1.2
+            }
+        }
+    },
+    "time":{
+        "to-run": 10
+    }
+}

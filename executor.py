@@ -532,6 +532,7 @@ class Executor:
 
     def main(self):
         while True:
+            print("hahah")
             self.set_iteration_variables()
 
             message = self.message
